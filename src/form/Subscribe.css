@@ -1,0 +1,122 @@
+.subscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.subscribe__title {
+    margin-top: 85px;
+    margin-bottom: 20px;
+    width: 350px;
+    height: 17px;
+    color: #000;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.subscribe__text {
+    margin-bottom: 30px;
+    width: 730px;
+    color: #999;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158.47%; /* 25.355px */
+}
+
+.email__form {
+    width: 489px;
+    height: 45px;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: row;
+}
+
+.email {
+    padding-left: 33px;
+    width: 299px;
+    height: 45px;
+    border-radius: 30px 0 0 30px;
+    border: 1px solid #F2F2F2;
+    background: #FFF;
+    box-shadow: 0 0 10px 0 rgba(111, 111, 111, 0.25);
+}
+
+::placeholder {
+    width: 117px;
+    height: 17px;
+    color: #999;
+    font-family: var(--font-family);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158.47%; /* 20.601px */
+}
+
+.subscribe__button {
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 190px;
+    height: 45px;
+    border-radius: 0 30px 30px 0;
+    background:  #4985FF;
+    box-shadow: 0 0 10px 0 rgba(111, 111, 111, 0.25);
+    cursor: pointer;
+}
+
+.form__label {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.subscribe__submitText.active {
+    margin-bottom: 10px;
+    display: block;
+    color: #999;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158.47%; /* 20.601px */
+}
+
+.subscribe__submitText {
+    display: none;
+}
+
+.subscribe__warning {
+    margin-bottom: 85px;
+    width: 386px;
+    height: 15px;
+    color: #999;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158.47%; /* 20.601px */
+}
+
+@media (max-width: 560px) {
+    .subscribe__text {
+        width: 330px;
+        margin-bottom: 20px;
+    }
+    .email__form {
+        width: 389px;
+        
+    }
+}

@@ -1,0 +1,132 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background: #F6F6F8;
+    padding-top: 70px;
+    margin-left: 50px;
+    padding-bottom: 100px;
+}
+
+/*.footer:last-child {*/
+/*    margin-left: 0;*/
+/*}*/
+
+.footer__wrapper {
+    background: #F6F6F8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
+.footer__item {
+    width: 255px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__title {
+    margin-bottom: 35px;
+    width: 242px;
+    height: 17px;
+    color: #000;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.item__text {
+    padding-bottom: 30px;
+    width: 225px;
+    height: 14px;
+    color:  #999;
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158.47%; /* 22.186px */
+}
+
+.footers {
+    background: #F6F6F8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footers__first {
+    display: flex;
+}
+
+.footer__line {
+    width: 1110px;
+    height: 1px;
+    margin: 0 auto;
+}
+
+.footer__end {
+    margin: 15px auto;
+    width: 386px;
+    height: 15px;
+    color: #999;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158.47%; /* 20.601px */
+}
+
+@media (max-width: 1120px) {
+    .footer {
+        margin-left: 0;
+    }
+    
+    .footer__title {
+        font-size: 16px;
+    }
+    
+    .footer__item {
+        width: 200px;
+    }
+    
+    .item__icon {
+        margin-right: 10px;
+    }
+    
+}
+
+@media (max-width: 1000px) {
+    .footers {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .footers__first {
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+   
+    
+}
+
+@media (max-width: 680px) {
+    .footers__first {
+        width: 500px;
+    }
+}
+
+@media (max-width: 560px) {
+    .footers__first {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
