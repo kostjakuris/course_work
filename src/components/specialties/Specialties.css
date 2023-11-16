@@ -1,0 +1,72 @@
+.specialties {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.specialties__first {
+    height: 490px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 80px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #504DC2 20.44%, #5F12D0 80.91%), #C4C4C4;
+}
+
+.specialities__text {
+    width: 540px;
+    height: 88px;
+    color: #FFF;
+    font-family: var(--font-family);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 146.28%; /* 52.661px */
+    margin-bottom: 70px;
+}
+
+.specialties__button {
+    margin: 0;
+}
+
+.specialties__cards {
+    position: absolute;
+    width: 100%;
+    top: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 70px;
+}
+
+.specialties__second {
+    height: 397px;
+}
+
+@media (max-width: 900px) {
+    .specialties__cards {
+        /*top: 350px;*/
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    
+    .specialties__first {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 160px;
+    }
+}
+
+@media (max-width: 600px) {
+    .specialities__text {
+        text-align: center;
+        font-size: 26px;
+        
+    }
+    
+}
+

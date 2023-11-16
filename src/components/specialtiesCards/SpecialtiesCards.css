@@ -1,0 +1,76 @@
+.cards {
+    overflow-x: hidden;
+}
+
+.cards:last-child {
+    margin-right: 0;
+}
+
+.cards__img {
+    margin-bottom: 30px;
+}
+
+.cards__header {
+    display: flex;
+    width: 281px;
+    height: 17px;
+    margin-bottom: 30px;
+}
+
+.cards__number {
+    color:#4985FF;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.cards__title {
+    color: #000;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.cards__text {
+    width: 350px;
+    color: #999;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158.47%; /* 25.355px */
+    margin-bottom: 30px;
+}
+
+.cards__link {
+    color: #4985FF;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+@media (max-width: 1250px) {
+    
+    .cards:nth-child(2) {
+        display: none;
+    }
+    
+    /*.cards:nth-child(3) {*/
+    /*    display: none;*/
+    /*}*/
+}
+
+@media (max-width: 900px) {
+    
+    .cards:nth-child(3) {
+        display: none;
+    }
+    
+}

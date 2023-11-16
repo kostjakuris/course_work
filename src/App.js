@@ -1,11 +1,11 @@
-import Header from "./header/Header";
-import Services from "./services/Services";
-import Standards from "./standarts/Standards";
-import Specialties from "./specialties/Specialties";
-import Projects from "./projects/Projects";
-import Work from "./work/Work";
-import Subscribe from "./form/Subscribe";
-import Footer from "./footer/Footer";
+import Header from "./components/header/Header";
+import Services from "./components/services/Services";
+import Standards from "./components/standarts/Standards";
+import Specialties from "./components/specialties/Specialties";
+import Projects from "./components/projects/Projects";
+import Work from "./components/work/Work";
+import Subscribe from "./components/form/Subscribe";
+import Footer from "./components/footer/Footer";
 import React from "react";
 
 function App() {
@@ -24,30 +24,30 @@ function App() {
                 <div className="footers">
                     <div className="footers__first">
 
-                        <Footer title={"Контактная информация"}
-                            firstIcon={"img/envelope.svg"} firstLink={"test@test.ru"}
+                        <Footer title={"Контактна інформація"}
+                            firstIcon={"img/envelope.svg"} firstLink={"test@test.com"}
                             secondIcon={"img/call.svg"} secondLink={"+8 777 555 66 99"}
                             thirdIcon={"img/placeholder.svg"}
-                            thirdLink={"Москва, Бульвар Ленина 33"}
+                            thirdLink={"Запоріжжя, Проспект Соборний 33"}
                         />
-                        <Footer title={"Основные ссылки"}
-                            firstIcon={"img/right-arrow.svg"} firstLink={"Главная"}
-                            secondIcon={"img/right-arrow.svg"} secondLink={"Наши проекты"}
-                            thirdIcon={"img/right-arrow.svg"} thirdLink={"Наши услуги"}
-                            fourthIcon={"img/right-arrow.svg"} fourthLink={"Контакты"}
+                        <Footer title={"Основні посилання"}
+                            firstIcon={"img/right-arrow.svg"} firstLink={"Головна"}
+                            secondIcon={"img/right-arrow.svg"} secondLink={"Наші проекти"}
+                            thirdIcon={"img/right-arrow.svg"} thirdLink={"Наші послуги"}
+                            fourthIcon={"img/right-arrow.svg"} fourthLink={"Контакти"}
 
                         />
                     </div>
                     <div className="footers__first">
 
-                        <Footer title={"Наши проекты"}
-                            firstIcon={"img/right-arrow.svg"} firstLink={"РосНано"}
+                        <Footer title={"Наші проекти"}
+                            firstIcon={"img/right-arrow.svg"} firstLink={"Мотор Січ"}
                             secondIcon={"img/right-arrow.svg"} secondLink={"Сколково"}
                             thirdIcon={"img/right-arrow.svg"} thirdLink={"Проект “Восток”"}
-                            fourthIcon={"img/right-arrow.svg"} fourthLink={"ТЭЦ Калининграда"}
+                            fourthIcon={"img/right-arrow.svg"} fourthLink={"Запорізька АЕС"}
                         />
-                        <Footer title={"Социальные сети"}
-                            firstIcon={"img/right-arrow.svg"} firstLink={"VK.com"}
+                        <Footer title={"Соціальні мережі"}
+                            firstIcon={"img/right-arrow.svg"} firstLink={"Viber"}
                             secondIcon={"img/right-arrow.svg"} secondLink={"Instagram"}
                             thirdIcon={"img/right-arrow.svg"} thirdLink={"Facebook"}
                             fourthIcon={"img/right-arrow.svg"} fourthLink={"Twitter"}
@@ -55,7 +55,7 @@ function App() {
                     </div>
                 </div>
                 <hr className="footer__line"/>
-                <p className="footer__end">(с) 2019. Все права защищены.</p>
+                <p className="footer__end">(с) 2019. Всі права захищені.</p>
             </div>
         </div>
     );
