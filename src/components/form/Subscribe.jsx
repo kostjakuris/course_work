@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {useFormik} from "formik";
 import * as yup from "yup";
+import axios from "axios";
 import "./Subscribe.css";
 
 const Subscribe = () => {
@@ -22,11 +23,28 @@ const Subscribe = () => {
         validationSchema: emailSchema,
         onSubmit: async () => {
             setSubscribeActive(true);
+            await subscribe(values);
             handleReset(values);
         },
     });
 
     const [subscribeActive, setSubscribeActive] = useState(false);
+
+    const subscribe = async ({sender_email}) => {
+        try {
+            const response = await axios.post("https://api.sendpulse.com/campaigns", {
+                sender_email,
+                sender_name: "my_sender_name",
+                subject: "hello customer",
+                list_id: "756589",
+                name: "my_api_campaign",
+                template_id: "775667"
+            });
+            return response.data;
+        } catch (e) {
+            console.log(e);
+        }
+    };
 
     return (
         <section className="subscribe">
@@ -59,7 +77,8 @@ const Subscribe = () => {
                     Ви успішно підписалися на нашу розсилку!
                 </p>
             </div>
-            <p className="subscribe__warning">Ми не надсилаємо спам, і не передаємо нікому ваші дані.</p>
+            <p className="subscribe__warning">Ми не надсилаємо спам, і не передаємо нікому ваші
+                дані.</p>
         </section>
     );
 };
