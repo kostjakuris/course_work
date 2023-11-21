@@ -30,7 +30,7 @@ const Subscribe = () => {
     const [subscribeActive, setSubscribeActive] = useState(false);
     const sub = async ({email}) => {
         try {
-            const response = await axios.post("http://localhost:5000/", {
+            const response = await axios.post("https://course-work-eta.vercel.app/", {
                email,
             })
             setSubscribeActive(true);
