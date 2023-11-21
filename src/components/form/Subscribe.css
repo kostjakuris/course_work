@@ -71,6 +71,7 @@
     line-height: normal;
     width: 190px;
     height: 45px;
+    border-color: transparent;
     border-radius: 0 30px 30px 0;
     background:  #4985FF;
     box-shadow: 0 0 10px 0 rgba(111, 111, 111, 0.25);
