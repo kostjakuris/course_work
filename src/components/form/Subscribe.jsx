@@ -22,29 +22,25 @@ const Subscribe = () => {
         },
         validationSchema: emailSchema,
         onSubmit: async () => {
-            setSubscribeActive(true);
-            await subscribe(values);
+            await sub(values);
             handleReset(values);
         },
     });
 
     const [subscribeActive, setSubscribeActive] = useState(false);
-
-    const subscribe = async ({sender_email}) => {
+    const sub = async ({email}) => {
         try {
-            const response = await axios.post("https://api.sendpulse.com/campaigns", {
-                sender_email,
-                sender_name: "my_sender_name",
-                subject: "hello customer",
-                list_id: "756589",
-                name: "my_api_campaign",
-                template_id: "775667"
-            });
+            const response = await axios.post("http://localhost:5000/", {
+               email,
+            })
+            setSubscribeActive(true);
             return response.data;
         } catch (e) {
+            setSubscribeActive(false);
             console.log(e);
         }
     };
+
 
     return (
         <section className="subscribe">
