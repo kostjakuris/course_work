@@ -41,6 +41,8 @@
 // module.exports = app;
 
 const mongoose = require("mongoose");
+const Post = require("./Post.js");
+
 
 const express = require("express");
 
@@ -50,11 +52,17 @@ const PORT = 5000;
 
 const app = express();
 
-app.use("/", (req, res) => {
-    res.send("server is running");
-});
+app.use(express.json());
 
-app.listen(5000, console.log("server started in port 5000"));
+app.post("/", async (req, res) => {
+    try {
+        const {email} = req.body;
+        await Post.create({email});
+        res.status(200).json("Subscribe successful");
+    } catch (e) {
+        res.status(500).json(e);
+    }
+});
 
 async function startApp() {
     try {
