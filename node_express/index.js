@@ -54,6 +54,10 @@ const app = express();
 
 app.use(express.json());
 
+app.use("/", (req, res) => {
+    res.send("server is running");
+});
+
 // app.post("/", async (req, res) => {
 //     try {
 //         const {email} = req.body;
