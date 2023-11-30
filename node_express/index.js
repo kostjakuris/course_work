@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const Post = require("./Post.js");
 
@@ -9,6 +10,11 @@ const PORT = process.env.PORT;
 const app = express();
 app.use(express.json());
 
+const corsOptions = {
+    origin: "https://course-work-pi.vercel.app/",
+    optionSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 app.post("/", async (req, res) => {
     try {
         const {email} = req.body;
