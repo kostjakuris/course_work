@@ -13,7 +13,7 @@ require("dotenv").config();
 app.use(express.json());
 
 const corsOptions = {
-    origin: "https://course-work-eta.vercel.app",
+    origin: "https://course-work-rosy.vercel.app/",
     optionSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
