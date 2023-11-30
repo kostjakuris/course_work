@@ -40,33 +40,33 @@
 //
 // module.exports = app;
 
-const mongoose = require("mongoose");
-const Post = require("./Post.js");
+// const mongoose = require("mongoose");
+// const Post = require("./Post.js");
 
 
 const express = require("express");
 
-const DB_URL = `mongodb+srv://kostjn04e:user@cluster0.rn2vxp0.mongodb.net/`;
+// const DB_URL = `mongodb+srv://kostjn04e:user@cluster0.rn2vxp0.mongodb.net/`;
 const PORT = 5000;
 
 
 const app = express();
 
-app.use(express.json());
+// app.use(express.json());
 
 app.use("/", (req, res) => {
     res.send("server is running");
 });
 
-app.post("/", async (req, res) => {
-    try {
-        const {email} = req.body;
-        await Post.create({email});
-        res.status(200).json("Subscribe successful");
-    } catch (e) {
-        res.status(500).json(e);
-    }
-});
+// app.post("/", async (req, res) => {
+//     try {
+//         const {email} = req.body;
+//         await Post.create({email});
+//         res.status(200).json("Subscribe successful");
+//     } catch (e) {
+//         res.status(500).json(e);
+//     }
+// });
 
 async function startApp() {
     try {
