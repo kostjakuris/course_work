@@ -41,8 +41,11 @@
 // module.exports = app;
 
 const mongoose = require("mongoose");
-const Post = require("./Post.js");
+// const Post = require("./Post.js");
 
+const Post = new mongoose.Schema({
+    email: String,
+});
 
 const express = require("express");
 
