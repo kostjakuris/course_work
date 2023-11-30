@@ -46,7 +46,7 @@ const mongoose = require("mongoose");
 
 const express = require("express");
 
-const DB_URL = `mongodb+srv://kostjn04e:user@cluster0.rn2vxp0.mongodb.net/`;
+const DB_URL = `mongodb+srv://kostjn04e:user@cluster0.rn2vxp0.mongodb.net/?retryWrites=true&w=majority`;
 const PORT = 5000;
 
 
