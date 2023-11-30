@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 
 const corsOptions = {
-    origin: "https://course-work-pi.vercel.app/",
+    origin: "https://course-work-pi.vercel.app",
     optionSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
