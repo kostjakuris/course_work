@@ -1,3 +1,4 @@
+const express = require("express");
 const mongoose = require("mongoose");
 // const cors = require("cors");
 const Post = require("./Post");
@@ -5,8 +6,6 @@ const Post = require("./Post");
 
 const DB_URL = `mongodb+srv://kostjn04e:user@cluster0.rn2vxp0.mongodb.net/`;
 const PORT = 5000;
-const express = require("express");
-
 
 const app = express();
 // require("dotenv").config();
@@ -39,3 +38,4 @@ async function startApp() {
 
 startApp();
 
+module.exports = app;
