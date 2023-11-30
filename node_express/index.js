@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors");
+// const cors = require("cors");
 const Post = require("./Post");
 
 
@@ -12,11 +12,11 @@ const app = express();
 require("dotenv").config();
 app.use(express.json());
 
-const corsOptions = {
-    origin: "https://course-work-rosy.vercel.app/",
-    optionSuccessStatus: 200,
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//     origin: "https://course-work-rosy.vercel.app/",
+//     optionSuccessStatus: 200,
+// };
+// app.use(cors(corsOptions));
 app.post("/", async (req, res) => {
     try {
         const {email} = req.body;
