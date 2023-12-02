@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, {forwardRef, useState} from "react";
 import {useFormik} from "formik";
 import * as yup from "yup";
 import axios from "axios";
 import "./Subscribe.css";
 
-const Subscribe = () => {
+const Subscribe = ({...props},newsRef) => {
     const emailSchema = yup.object().shape({
         email: yup.string().required("Ви не вказали e-mail адресу").email("Неправильна e-mail адреса"),
     });
@@ -43,7 +43,7 @@ const Subscribe = () => {
 
 
     return (
-        <section className="subscribe">
+        <section className="subscribe" ref={newsRef}>
             <h3 className="subscribe__title">Підпишіться на нашу розсилку</h3>
             <p className="subscribe__text">
                 Корисні статті, акції, новини – отримайте все це зараз!
@@ -79,4 +79,4 @@ const Subscribe = () => {
     );
 };
 
-export default Subscribe;
+export default forwardRef(Subscribe);

@@ -1,9 +1,9 @@
-import React from "react";
+import React, {forwardRef} from "react";
 import "./Footer.css";
 
-const Footer = ({...props}) => {
+const Footer = ({...props},contactRef) => {
     return (
-        <footer className="footer">
+        <footer className="footer" ref={contactRef}>
             <h3 className="footer__title">{props.title}</h3>
             <div className="footer__item">
                 <span className="item__icon">
@@ -34,4 +34,4 @@ const Footer = ({...props}) => {
     );
 };
 
-export default Footer;
+export default forwardRef(Footer);

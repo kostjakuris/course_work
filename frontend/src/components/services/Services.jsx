@@ -1,10 +1,10 @@
-import React from "react";
+import React, {forwardRef} from "react";
 import "./Services.css";
 import Card from "../card/Card";
 
-const Services = () => {
+const Services = ({...props},serviceRef) => {
     return (
-        <section className="service">
+        <section className="service" ref={serviceRef}>
             <h2 className="service__header">
                 Ми створюємо мобільні програми для великих корпорацій</h2>
             <p className="service__text">Lorem Ipsum - це текст-"риба", що часто використовується в
@@ -25,4 +25,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default forwardRef(Services);

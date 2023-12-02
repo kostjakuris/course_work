@@ -1,9 +1,9 @@
-import React from "react";
+import React, {forwardRef} from "react";
 import "./Projects.css";
 
-const Projects = () => {
+const Projects = ({...props},projectRef) => {
     return (
-        <section className="projects">
+        <section className="projects" ref={projectRef}>
             <div className="projects__wrapper">
                 <h2 className="projects__title">Наші проекти</h2>
                 <p className="projects__text">
@@ -25,4 +25,4 @@ const Projects = () => {
     );
 };
 
-export default Projects;
+export default forwardRef(Projects);

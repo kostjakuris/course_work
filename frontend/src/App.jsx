@@ -7,19 +7,47 @@ import Work from "./components/work/Work";
 import Subscribe from "./components/form/Subscribe";
 import Footer from "./components/footer/Footer";
 import "./normalize.css";
-import React from "react";
+import React, {useRef} from "react";
 
 function App() {
+    const headerRef = useRef(null);
+    const projectRef = useRef(null);
+    const serviceRef = useRef(null);
+    const newsRef = useRef(null);
+    const contactRef = useRef(null);
+
+    const handleHeaderClick = () => {
+        headerRef.current?.scrollIntoView({behavior: "smooth"});
+    };
+
+    const handleProjectClick = () => {
+        projectRef.current?.scrollIntoView({behavior: "smooth"});
+    };
+
+    const handleServiceClick = () => {
+        serviceRef.current?.scrollIntoView({behavior: "smooth"});
+    };
+
+    const handleNewsClick = () => {
+        newsRef.current?.scrollIntoView({behavior: "smooth"});
+    };
+
+    const handleContactClick = () => {
+        contactRef.current?.scrollIntoView({behavior: "smooth"});
+    };
     return (
         <div>
-            <Header/>
+            <Header handleHeaderClick={handleHeaderClick} handleProjectClick={handleProjectClick}
+                    handleServiceClick={handleServiceClick}
+                    handleNewsClick={handleNewsClick} handleContactClick={handleContactClick}
+                    ref={headerRef}/>
             <main>
-                <Services/>
+                <Services ref={serviceRef}/>
                 <Standards/>
                 <Specialties/>
-                <Projects/>
+                <Projects ref={projectRef}/>
                 <Work/>
-                <Subscribe/>
+                <Subscribe ref={newsRef}/>
             </main>
             <div className="footer__wrapper">
                 <div className="footers">
@@ -29,7 +57,7 @@ function App() {
                                 firstIcon={"img/envelope.svg"} firstLink={"test@test.com"}
                                 secondIcon={"img/call.svg"} secondLink={"+8 777 555 66 99"}
                                 thirdIcon={"img/placeholder.svg"}
-                                thirdLink={"Запоріжжя, Проспект Соборний 33"}
+                                thirdLink={"Запоріжжя, Проспект Соборний 33"} ref={contactRef}
                         />
                         <Footer title={"Основні посилання"}
                                 firstIcon={"img/right-arrow.svg"} firstLink={"Головна"}

@@ -17,6 +17,8 @@
     margin-bottom: 110px;
 }
 
+
+
 .header__title {
     display: flex;
     align-items: center;
@@ -88,5 +90,19 @@
     .header__text {
         width: 100%;
         font-size: 28px;
+    }
+}
+
+@media (max-width: 550px) {
+    .header {
+        overflow: hidden;
+        
+    }
+    .header__title {
+        margin-top: 60px;
+    }
+    
+    .header__button {
+        margin-bottom: 30px;
     }
 }
